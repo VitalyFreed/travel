@@ -1,10 +1,22 @@
 import React from 'react';
+import {useSelector} from "react-redux";
 
 import styles from './price.module.scss';
 
-const Price = () => {
+import dollarIcon from '../../../assets/slider/dollar.svg';
+
+import {getPriceForCountry} from "../../../reducers/countryReducer";
+
+const Price = ({activeCountry, month}) => {
+    const price = useSelector(state => getPriceForCountry(state, activeCountry, month));
+
     return (
-        <span className={styles.price}>price</span>
+        <div className={styles.price}>
+            <div className={styles.container}>
+                <span className={styles['price__text']}>{price}</span>
+                <img src={dollarIcon}/>
+            </div>
+        </div>
     );
 };
 

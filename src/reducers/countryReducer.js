@@ -212,3 +212,9 @@ const countrySlice = createSlice({
 export default countrySlice.reducer;
 
 export const getCountries = state => state.country;
+
+export const getPriceForCountry = (state, countryId, month) => {
+  const country = state.country.find(c => c.id === countryId);
+  const price = country.calendar.find(c => c.id === month).price;
+  return price;
+};

@@ -9,30 +9,30 @@ import Calendar from "../Calendar/Calendar";
 import Price from "../Price/Price";
 
 const Choose = () => {
-    //const [activeItem, setActiveItem] = useState(0);
+    const [activeCountry, setActiveCountry] = useState(0);
 
-    // const date = new Date();
-    //
-    // const [activeDate, setActiveDate] = useState({
-    //     year: date.getFullYear(),
-    //     month: date.getMonth(),
-    //     day: date.getDate()
-    // });
+    const date = new Date();
+
+    const [activeDate, setActiveDate] = useState({
+        year: date.getFullYear(),
+        month: date.getMonth(),
+        day: date.getDate()
+    });
 
     return (
         <div className={styles.choose}>
             <div className={styles.container}>
                 <div className={classNames(styles.destinations, styles.block)}>
                     <h2 className={styles.title}>Destinations</h2>
-                    <DestinationSelect/>
+                    <DestinationSelect activeCountry={activeCountry} setActiveCounty={setActiveCountry}/>
                 </div>
                 <div className={classNames(styles.calendar, styles.block)}>
                     <h2 className={styles.title}>Check in</h2>
-                    <Calendar/>
+                    <Calendar activeDate={activeDate} setActiveDate={setActiveDate}/>
                 </div>
                 <div className={classNames(styles.price, styles.block)}>
                     <h2 className={styles.title}>Price Range</h2>
-                    <Price/>
+                    <Price activeCountry={activeCountry} month={activeDate.month}/>
                 </div>
                 <Button title='Discover Now'/>
             </div>

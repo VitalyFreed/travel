@@ -1,3 +1,18 @@
 .price {
 
 }
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.price__text {
+  font-family: Noto Serif;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 25px;
+  color: #FF715B;
+}

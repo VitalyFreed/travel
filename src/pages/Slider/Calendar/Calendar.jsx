@@ -4,17 +4,8 @@ import styles from './calendar.module.scss';
 
 import calendarIcon from '../../../assets/slider/calendar.svg';
 import arrowIcon from '../../../assets/slider/arrow.svg';
-import {act} from "@testing-library/react";
 
-const Calendar = () => {
-    const date = new Date();
-
-    const [activeDate, setActiveDate] = useState({
-        year: date.getFullYear(),
-        month: date.getMonth(),
-        day: date.getDate()
-    });
-
+const Calendar = ({activeDate, setActiveDate}) => {
     const [isVisible, setVisible] = useState(false);
 
     const showCalendar = e => {
