@@ -1,0 +1,63 @@
+.destinationSelect {
+
+}
+
+.container {
+  padding-top: 10px;
+  position: relative;
+}
+
+.active__item {
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  &-text {
+    font-family: Noto Serif;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 25px;
+    color: #FF715B;
+  }
+
+  .arrow {
+    transform: rotate(90deg);
+  }
+}
+
+.country__list {
+  position: absolute;
+  width: 100%;
+  margin-top: 5px;
+  box-shadow: 0 0 7px #000000;
+  border-radius: 10px;
+  background: #FF715B;
+}
+
+.country__item {
+  font-family: Noto Serif;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 25px;
+  color: #FFFFFF;
+  cursor: pointer;
+  padding-left: 5px;
+
+  &:hover {
+    background: #FFFFFF;
+    color: #FF715B;
+  }
+
+  &:first-child {
+    border-radius: 10px 10px 0 0;
+  }
+
+  &:last-child {
+    border-radius: 0 0 10px 10px;
+  }
+}
+
+.country__item-active {
+  background: #bce8f1;
+}

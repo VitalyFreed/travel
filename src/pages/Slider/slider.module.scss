@@ -1,0 +1,46 @@
+.slider {
+  background: url('../../assets/slider/banner.png');
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+/*****************************************************************************************/
+/* SLIDER TITLE BLOCK */
+/*******************************************************************************************/
+
+.title-block {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 285px 741px 304px 135px;
+
+  .title {
+    font-family: Noto Serif;
+    font-weight: bold;
+    font-size: 84px;
+    line-height: 112px;
+    color: #2C2C2C;
+    padding-bottom: 50px;
+
+    @media (max-width: 1920px) {
+      font-size: 56px;
+      line-height: 80px;
+      padding-bottom: 30px;
+    }
+  }
+
+  @media (max-width: 1920px) {
+    margin: 190px 670px 202px 90px;
+  }
+}
+
+/*****************************************************************************************/
+/* SLIDER CHOOSE BLOCK */
+/*******************************************************************************************/
+
+.choose-block {
+
+}

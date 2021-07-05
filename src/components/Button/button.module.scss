@@ -1,0 +1,16 @@
+.button {
+  font-family: Noto Serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 25px;
+  text-align: center;
+  color: #FFFFFF;
+  padding: 18px 36px;
+  background: #FF715B;
+
+  @media (max-width: 1920px) {
+    padding: 12px 24px;
+    font-size: 15px;
+  };
+}

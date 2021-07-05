@@ -1,0 +1,21 @@
+.calendar {
+}
+
+.container {
+  cursor: pointer;
+}
+
+.currentDate {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top: 10px;
+
+  span {
+    font-family: Noto Serif;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 25px;
+    color: #FF715B;
+  }
+}
