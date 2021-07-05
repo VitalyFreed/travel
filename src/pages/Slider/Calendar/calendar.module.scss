@@ -3,6 +3,7 @@
 
 .container {
   cursor: pointer;
+  position: relative;
 }
 
 .currentDate {
@@ -18,4 +19,47 @@
     line-height: 25px;
     color: #FF715B;
   }
+}
+
+.arrows {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.calendar__wrapper {
+  position: absolute;
+  width: 100%;
+
+}
+
+.calendarTable {
+  margin-top: 10px;
+  box-shadow: 0px 0px 16px 1px rgba(219, 154, 154, 0.75);
+  border-radius: 5px;
+  border-collapse: collapse;
+
+  th, td {
+    width: 12%;
+    text-align: center;
+  }
+
+  th {
+    background: #bce8f1;
+    vertical-align: middle;
+    height: 40px;
+    padding-bottom: 2px;
+  }
+
+  td {
+    padding: 7px;
+    height: 30px;
+  }
+}
+
+.activeDay {
+  border-radius: 2px;
+  background: #fbb450;
+  box-shadow: 0px 0px 16px 1px rgba(219, 154, 154, 0.75);
 }

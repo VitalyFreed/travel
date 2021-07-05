@@ -10,6 +10,7 @@ const App = () => {
         <div className={styles.app}>
             <Header/>
             <Slider/>
+            <Cards/>
         </div>
     );
 };
