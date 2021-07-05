@@ -1,5 +1,10 @@
 .slider {
-  background: url('../../assets/slider/banner.png');
+  background: url('../../assets/slider/banner.png') no-repeat 0 -200px;
+  height: 1000px;
+
+  @media (max-width: 1920px) {
+    height: 750px;
+  }
 }
 
 .container {
@@ -33,7 +38,7 @@
   }
 
   @media (max-width: 1920px) {
-    margin: 190px 670px 202px 90px;
+    margin: 150px 670px 300px 90px;
   }
 }
 

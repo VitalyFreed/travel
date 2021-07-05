@@ -25,6 +25,10 @@
 
       img {
         width: 45px;
+
+        @media (max-width: 1920px) {
+          width: 40px;
+        }
       }
     }
 
@@ -56,6 +60,10 @@
       line-height: 25px;
       text-align: center;
       color: #2C2C2C;
+
+      @media (max-width: 1920px) {
+        font-size: 16px;
+      }
     }
   }
 }
@@ -75,6 +83,10 @@
       width: 18px;
       margin-right: 14px;
       cursor: pointer;
+
+      @media (max-width: 1920px) {
+        width: 16px;
+      }
     }
 
     .user-name {
@@ -84,12 +96,20 @@
       font-size: 18px;
       line-height: 25px;
       color: #2C2C2C;
+
+      @media (max-width: 1920px) {
+        font-size: 16px;
+      }
     }
 
     .search-icon {
       width: 20px;
       margin-left: 17px;
       cursor: pointer;
+
+      @media (max-width: 1920px) {
+        width: 18px;
+      }
     }
   }
 }
