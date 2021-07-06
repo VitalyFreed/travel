@@ -32,7 +32,7 @@ const Choose = () => {
                 </div>
                 <div className={classNames(styles.price, styles.block)}>
                     <h2 className={styles.title}>Price Range</h2>
-                    <Price activeCountry={activeCountry} month={activeDate.month}/>
+                    <Price activeCountry={activeCountry} month={activeDate.month + 1}/>
                 </div>
                 <Button title='Discover Now'/>
             </div>

@@ -20,12 +20,18 @@
       color: #2C2C2C;
       padding-bottom: 50px;
       max-width: 804px;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
 
       @media (max-width: 1920px) {
         font-size: 56px;
         line-height: 80px;
         padding-bottom: 30px;
         max-width: 520px;
+        min-height: 180px;
+        max-height: 180px;
       }
     }
 

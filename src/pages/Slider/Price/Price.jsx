@@ -8,6 +8,7 @@ import dollarIcon from '../../../assets/slider/dollar.svg';
 import {getPriceForCountry} from "../../../reducers/countryReducer";
 
 const Price = ({activeCountry, month}) => {
+    console.log(month)
     const price = useSelector(state => getPriceForCountry(state, activeCountry, month));
 
     return (

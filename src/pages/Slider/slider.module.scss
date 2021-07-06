@@ -57,6 +57,17 @@
     align-items: center;
     cursor: pointer;
     margin-right: 20px;
+    transition: background .2s ease-out;
+
+    &:hover {
+      background: #FF715B;
+
+      svg {
+        path {
+          fill: #FFFFFF;
+        }
+      }
+    }
   }
 
   .number {
