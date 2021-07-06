@@ -65,11 +65,11 @@ const Calendar = ({activeDate, setActiveDate}) => {
                     <div className={styles.arrows}>
                         <img src={arrowIcon} style={{transform: 'rotate(180deg)'}}
                              onClick={e => handleChangeMonth(-1)}/>
-                        <span>
-                        {activeDate.day < 10 ? `0${activeDate.day}.` : `${activeDate.day}.`}
+                        <span className={styles['calendar__wrapper-date']}>
+                            {activeDate.day < 10 ? `0${activeDate.day}.` : `${activeDate.day}.`}
                             {activeDate.month + 1 < 10 ? `0${activeDate.month + 1}.` : `${activeDate.month + 1}.`}
                             {activeDate.year}
-                    </span>
+                        </span>
                         <img src={arrowIcon} onClick={e => handleChangeMonth(1)}/>
                     </div>
                     <table className={styles.calendarTable}>

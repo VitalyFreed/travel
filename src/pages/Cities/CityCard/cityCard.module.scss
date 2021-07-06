@@ -1,0 +1,75 @@
+.cityCard {
+
+}
+
+.container {
+  position: relative;
+  cursor: pointer;
+
+  animation-name: countryAnimationR;
+  animation-duration: .5s;
+  animation-fill-mode: forwards;
+
+  &:hover {
+    transition: transform .3s ease-out;
+    animation-name: countryAnimation;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+  }
+}
+
+@keyframes countryAnimation {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-15px);
+  }
+}
+
+@keyframes countryAnimationR {
+  0% {
+    transform: translateY(-15px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.city-img {
+  margin-right: 30px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 47.69%, rgba(0, 0, 0, 0.8) 100%);
+
+  img {
+    width: 330px;
+    height: 400px;
+    position: relative;
+    z-index: -1;
+
+    @media (max-width: 1920px) {
+      width: 250px;
+      height: 330px;
+    }
+  }
+
+  @media (max-width: 1920px) {
+    margin-right: 20px;
+  }
+}
+
+.cityName {
+  font-family: Noto Serif;
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 38px;
+  color: #FFFFFF;
+  position: absolute;
+  left: 30px;
+  bottom: 30px;
+
+  @media (max-width: 1920px) {
+    left: 20px;
+    bottom: 20px;
+    font-size: 23px;
+  }
+}

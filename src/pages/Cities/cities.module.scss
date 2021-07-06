@@ -1,5 +1,6 @@
 .cities {
   margin-top: 294px;
+  margin-bottom: 200px;
 
   @media (max-width: 1920px) {
     margin-top: 200px;
@@ -7,5 +8,44 @@
 }
 
 .container {
+  display: flex;
+  flex-direction: row;
+}
 
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin-right: 75px;
+
+  &__title {
+    font-family: Noto Serif;
+    font-weight: 800;
+    font-size: 48px;
+    line-height: 65px;
+    color: #2C2C2C;
+    margin-bottom: 40px;
+
+    @media (max-width: 1920px) {
+      font-size: 42px;
+      margin-bottom: 25px;
+    }
+
+    span {
+      color: #FF715B;
+    }
+  }
+
+  &__text {
+    font-family: Product Sans;
+    font-size: 18px;
+    line-height: 26px;
+    color: #A79997;
+    margin-bottom: 60px;
+
+    @media (max-width: 1920px) {
+      margin-bottom: 45px;
+    }
+  }
 }

@@ -30,6 +30,12 @@
 .calendar__wrapper {
   position: absolute;
   width: 100%;
+
+  &-date {
+    //color: #FFFFFF;
+    //padding: 0 30px;
+    //background: rgba(#119480, 0.5);
+  }
 }
 
 .calendarTable {
@@ -38,10 +44,18 @@
   border-radius: 5px;
   border-collapse: collapse;
   background: #fff;
+  position: absolute;
+  left: -50%;
+  transform: translateX(35%);
 
   th, td {
     width: 12%;
     text-align: center;
+
+    &:hover {
+      border-radius: 2px;
+      background: #fbb450;
+    }
   }
 
   th {
