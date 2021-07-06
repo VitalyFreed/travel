@@ -21,11 +21,13 @@
   }
 
   .arrow {
+    transition: all .3s ease-out;
     transform: rotate(90deg);
   }
 }
 
 .country__list {
+  transition: all .5s ease-out;
   position: absolute;
   width: 100%;
   margin-top: 5px;

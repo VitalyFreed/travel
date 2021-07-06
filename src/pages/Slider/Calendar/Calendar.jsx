@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 
 import styles from './calendar.module.scss';
 
@@ -50,8 +50,6 @@ const Calendar = ({activeDate, setActiveDate}) => {
         }));
     };
 
-    //{date.toLocaleString('en', {month: 'long'})}
-
     return (
         <div className={styles.calendar}>
             <div className={styles.container}>
@@ -76,19 +74,22 @@ const Calendar = ({activeDate, setActiveDate}) => {
                     </div>
                     <table className={styles.calendarTable}>
                         <thead>
-                        <th>Пн</th>
-                        <th>Вт</th>
-                        <th>Ср</th>
-                        <th>Чт</th>
-                        <th>Пт</th>
-                        <th>Сб</th>
-                        <th>Вс</th>
+                        <tr>
+                            <th>Пн</th>
+                            <th>Вт</th>
+                            <th>Ср</th>
+                            <th>Чт</th>
+                            <th>Пт</th>
+                            <th>Сб</th>
+                            <th>Вс</th>
+                        </tr>
                         </thead>
                         <tbody>
                         {weeks.map(week =>
-                            <tr>
+                            <tr key={week}>
                                 {days.slice(week * 7, (week + 1) * 7).map(day =>
                                     <td
+                                        key={day}
                                         onClick={e => handleSelectDay(day)}
                                         className={day + 1 === activeDate.day ? styles.activeDay : null}
                                     >

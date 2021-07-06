@@ -1,10 +1,5 @@
 .slider {
-  background: url('../../assets/slider/banner.png') no-repeat 0 -200px;
-  height: 1000px;
 
-  @media (max-width: 1920px) {
-    height: 750px;
-  }
 }
 
 .container {
@@ -13,39 +8,63 @@
 }
 
 /*****************************************************************************************/
-/* SLIDER TITLE BLOCK */
+/* FOOTER BLOCK */
 /*******************************************************************************************/
 
-.title-block {
+.footer {
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  margin: 285px 741px 304px 135px;
-
-  .title {
-    font-family: Noto Serif;
-    font-weight: bold;
-    font-size: 84px;
-    line-height: 112px;
-    color: #2C2C2C;
-    padding-bottom: 50px;
-
-    @media (max-width: 1920px) {
-      font-size: 56px;
-      line-height: 80px;
-      padding-bottom: 30px;
-    }
-  }
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding-top: 304px;
 
   @media (max-width: 1920px) {
-    margin: 150px 670px 300px 90px;
+    padding-top: 255px;
   }
 }
 
 /*****************************************************************************************/
-/* SLIDER CHOOSE BLOCK */
+/* CHANGE SLIDE BLOCK */
 /*******************************************************************************************/
 
-.choose-block {
+.changeSlide {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: relative;
+  left: 0;
+  top: 10px;
 
+  .line {
+    width: 234px;
+    height: 1px;
+    background: #F5EBE9;
+    margin-left: 10px;
+    margin-right: 30px;
+
+    @media (max-width: 1920px) {
+      width: 170px;
+    }
+  }
+
+  .arrow {
+    width: 47px;
+    height: 47px;
+    border: 2px solid #F5EBE9;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin-right: 20px;
+  }
+
+  .number {
+    font-family: Noto Serif;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 33px;
+    text-align: center;
+    color: #FF715B;
+  }
 }
