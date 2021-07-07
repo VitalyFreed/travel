@@ -22,7 +22,7 @@ const Cities = () => {
             img: parisImg
         },
         {
-            id: 0,
+            id: 2,
             name: 'Japan',
             img: japanImg
         },
@@ -42,7 +42,7 @@ const Cities = () => {
                     <Button title='Discover More'/>
                 </div>
                 <div className={styles['card__list']}>
-                    {cities.map(city => <CityCard cityName={city.name} cityImg={city.img}/>)}
+                    {cities.map(city => <CityCard key={city.id} cityName={city.name} cityImg={city.img}/>)}
                     <div className={styles.rectangle}></div>
                 </div>
             </div>

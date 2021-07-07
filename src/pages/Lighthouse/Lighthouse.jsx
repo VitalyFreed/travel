@@ -50,7 +50,7 @@ const Lighthouse = () => {
                 </div>
                 <div className={styles.info}>
                     <h2 className={styles['info__title']}>We Offering In Total 793 Tours Out The World</h2>
-                    {info.map(item => <Info title={item.title} img={item.img} text={item.text}/>)}
+                    {info.map(item => <Info key={item.id} title={item.title} img={item.img} text={item.text}/>)}
                 </div>
             </div>
         </div>
