@@ -41,7 +41,10 @@ const Cities = () => {
                     </p>
                     <Button title='Discover More'/>
                 </div>
-                {cities.map(city => <CityCard cityName={city.name} cityImg={city.img}/>)}
+                <div className={styles['card__list']}>
+                    {cities.map(city => <CityCard cityName={city.name} cityImg={city.img}/>)}
+                    <div className={styles.rectangle}></div>
+                </div>
             </div>
         </div>
     );

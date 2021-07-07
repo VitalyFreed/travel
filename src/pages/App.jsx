@@ -6,6 +6,7 @@ import Header from "./Header/Header";
 import Slider from "./Slider/Slider";
 import CardList from "./CardList/CardList";
 import Cities from "./Cities/Cities";
+import Lighthouse from "./Lighthouse/Lighthouse";
 
 const App = () => {
     return (
@@ -14,6 +15,7 @@ const App = () => {
             <Slider/>
             <CardList/>
             <Cities/>
+            <Lighthouse/>
         </div>
     );
 };

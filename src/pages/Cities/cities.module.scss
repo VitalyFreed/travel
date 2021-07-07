@@ -10,6 +10,8 @@
 .container {
   display: flex;
   flex-direction: row;
+  align-items: center;
+  padding-right: 75px;
 }
 
 .info {
@@ -18,6 +20,7 @@
   justify-content: center;
   align-items: flex-start;
   margin-right: 75px;
+  position: relative;
 
   &__title {
     font-family: Noto Serif;
@@ -28,8 +31,8 @@
     margin-bottom: 40px;
 
     @media (max-width: 1920px) {
-      font-size: 42px;
-      margin-bottom: 25px;
+      font-size: 40px;
+      margin-bottom: 20px;
     }
 
     span {
@@ -45,7 +48,29 @@
     margin-bottom: 60px;
 
     @media (max-width: 1920px) {
-      margin-bottom: 45px;
+      font-size: 17px;
+      margin-bottom: 40px;
+    }
+  }
+}
+
+.card__list {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+
+  .rectangle {
+    position: absolute;
+    z-index: -1;
+    right: -50%;
+    top: -40%;
+    width: 780px;
+    height: 580px;
+    background: #F7F7F7;
+
+    @media (max-width: 1920px) {
+      height: 500px;
+      top: -30%;
     }
   }
 }
