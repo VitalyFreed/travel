@@ -16,7 +16,7 @@ const Place = ({id, name, price, reviews, rating, img}) => {
                             <div className={styles['info__stat']}>
                                 <span className={styles['info__stat-price']}>${price}</span>
                                 <div className={styles['info__stat-rating']}>
-                                    <Stars/>
+                                    <Stars rating={rating}/>
                                 </div>
                                 <span className={styles['info__stat-reviews']}>{reviews / 1000}k Reviews</span>
                             </div>

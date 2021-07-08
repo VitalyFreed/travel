@@ -1,0 +1,47 @@
+.customers {
+  margin-bottom: 200px;
+}
+
+.container {
+
+}
+
+.content {
+  padding: 0 360px;
+  position: relative;
+}
+
+.title {
+  font-family: Noto Serif;
+  font-weight: 800;
+  font-size: 48px;
+  line-height: 65px;
+  text-align: center;
+  color: #2C2C2C;
+}
+
+.slider {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.slider__circles {
+  display: flex;
+  flex-direction: row;
+  transform: translateY(-65px);
+
+  .circle {
+    width: 10px;
+    height: 10px;
+    background: #C4C4C4;
+    border-radius: 50%;
+    margin-right: 20px;
+    cursor: pointer;
+
+    @media (max-width: 1920px) {
+      margin-right: 15px;
+    }
+  }
+}
+

@@ -1,0 +1,68 @@
+.customer {
+  box-shadow: 0px 20px 30px rgba(227, 202, 202, 0.3);
+  margin-top: 100px;
+  border-top: 11px solid #FF715B;
+}
+
+.container {
+  padding: 80px 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.info__container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 50px;
+  position: relative;
+
+  @media (max-width: 1920px) {
+    margin-bottom: 35px;
+  }
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  margin-left: 15px;
+
+  &__name {
+    font-family: Noto Serif;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 33px;
+
+    @media (max-width: 1920px) {
+      font-size: 20px;
+    }
+  }
+
+  &__speciality {
+    font-family: Product Sans;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 22px;
+    color: #FF715B;
+
+    @media (max-width: 1920px) {
+      font-size: 17px;
+    }
+  }
+}
+
+.text {
+  font-family: Product Sans;
+  font-size: 24px;
+  line-height: 36px;
+  text-align: center;
+  color: #A79997;
+  margin-bottom: 40px;
+
+  @media (max-width: 1920px) {
+    font-size: 17px;
+    line-height: 30px;
+    margin-bottom: 30px;
+  }
+}
