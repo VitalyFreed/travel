@@ -2,33 +2,62 @@ import React, {useEffect, useRef, useState} from 'react';
 
 import styles from './customerAvatar.module.scss';
 
-const CustomerAvatar = ({avatar, inner}) => {
+const CustomerAvatar = ({avatar, inner, customersPosition, innerPosition, setInnerPosition}) => {
     const positionRef = useRef(null);
-
-    //const [innerPosition, setInnerPosition] = useState(null);
 
     const [styleForImg, setStyleForImg] = useState({
         border: `5px solid ${avatar.borderColor}`,
-        borderRadius: '50%',
-        boxShadow: '0px 10px 30px #EFD8FA',
-        width: inner ? avatar.width.inner : avatar.width.outer
+        width: avatar.width.outer,
     });
 
+    const x = customersPosition.x + avatar.position.x - innerPosition.x;
+    const y = customersPosition.y + avatar.position.y - innerPosition.y;
+
     const [styleForContainer, setStyleForContainer] = useState({
-        position: inner ? 'relative' : 'absolute',
-        transform: inner ? 'translate(0, 0)' : `translate(${avatar.position.x}px, ${avatar.position.y}px)`,
+        position: inner ? null : 'absolute',
+        transform: inner ? null : `translate(${avatar.position.x}px, ${avatar.position.y}px)`,
+        display: inner ? 'block' : 'block',
         top: 0,
         left: 0,
-        cursor: 'pointer',
-        transition: 'all 1s ease-out'
+        cursor: 'pointer'
     });
 
     // useEffect(() => {
+    //     const x1 = positionRef.current.getBoundingClientRect().left;
+    //     const y1 = positionRef.current.getBoundingClientRect().top + window.pageYOffset;
     //     if (inner) {
-    //         setInnerPosition('innerPosition');
-    //         console.log(positionRef.current.getBoundingClientRect());
+    //
+    //         setStyleForContainer(prevState => ({
+    //             ...prevState,
+    //             position: 'relative',
+    //             left: x,
+    //             top: y,
+    //         }));
+    //         setStyleForContainer(prevState => ({
+    //             ...prevState,
+    //             transition: 'all 1s ease-out',
+    //             //transform: `translate(0, 0)`,
+    //             display: 'block'
+    //         }));
+    //         setTimeout(() => setStyleForContainer(prevState => ({
+    //             ...prevState,
+    //             transition: 'all 1s ease-out',
+    //             transform: `translate(${-x}px, ${-y}px)`,
+    //         })), 500)
+    //     } else {
+    //         const x1 = innerPosition.x - customersPosition.x;
+    //         const y1 = innerPosition.y - customersPosition.y;
+    //         setStyleForContainer(prevState => ({
+    //             ...prevState,
+    //             transform: `translate(${x1}px, ${y1}px)`
+    //         }));
+    //         setTimeout(() => setStyleForContainer(prevState => ({
+    //             ...prevState,
+    //             transition: 'all 1s ease-out',
+    //             transform: `translate(${avatar.position.x}px, ${avatar.position.y}px)`,
+    //         })), 100);
     //     }
-    // }, [innerPosition]);
+    // }, [innerPosition, customersPosition]);
 
     return (
         <div className={styles.customerAvatar} style={styleForContainer} ref={positionRef}>

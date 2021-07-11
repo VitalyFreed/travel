@@ -1,0 +1,47 @@
+.download {
+  background: url("../../assets/download/plane.png") no-repeat 65% 35px,
+  url("../../assets/download/bagpack.png") no-repeat 73.5% 70%,
+  url("../../assets/download/logo.png") no-repeat 72% 92%,
+  url("../../assets/download/screen.png") no-repeat 74.6% bottom,
+  url("../../assets/download/screen_1.png") no-repeat 75% bottom,
+  url("../../assets/download/app.png") no-repeat 94.4% bottom,
+  url("../../assets/download/screen_2.png") no-repeat 95% bottom,
+  linear-gradient(90deg, #A6F2F2 0%, #DDF181 100%);
+  background-size: 25%, 15%, 10%, 19%, 20%, 19%, 20%, 100%;
+  margin-bottom: 200px;
+}
+
+.container {
+  padding: 160px 920px 160px 100px;
+
+  @media (max-width: 1920px) {
+    padding: 120px 650px 120px 80px;
+  }
+}
+
+.title {
+  font-family: Noto Serif;
+  font-weight: 800;
+  font-size: 48px;
+  line-height: 65px;
+  color: #2C2C2C;
+  margin-bottom: 60px;
+
+  @media (max-width: 1920px) {
+    font-size: 40px;
+    margin-bottom: 40px;
+  }
+}
+
+.applications {
+  display: flex;
+  flex-direction: row;
+
+  .googlePlay {
+    margin-right: 20px;
+  }
+
+  .appStore {
+
+  }
+}

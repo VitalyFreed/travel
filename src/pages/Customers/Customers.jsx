@@ -1,4 +1,4 @@
-import React, {useRef, useState} from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 
 import styles from './customer.module.scss';
 
@@ -168,14 +168,31 @@ const Customers = () => {
         setCurrentSlide(customerId);
     };
 
+    const [customersPosition, setCustomersPosition] = useState({x: 120, y: 3444});
+    const [innerPosition, setInnerPosition] = useState({x: 622, y: 3765});
+
+    const customersRef = useRef(null);
+
+    useEffect(() => {
+        const coords = customersRef.current.getBoundingClientRect();
+        //setCustomersPosition({x: coords.left, y: coords.top + window.pageYOffset});
+    }, []);
+
     return (
-        <div className={styles.customers}>
+        <div className={styles.customers} ref={customersRef}>
             <div className={styles.container}>
                 <div className={styles.content}>
                     <h2 className={styles.title}>What Our Happy Customers Say About Us</h2>
                     <div className={styles.slider}>
                         {customers.map((customer, i) => i === currentSlide ?
-                            <Customer key={customer.id}{...customer} inner={true}/>
+                            <Customer
+                                key={customer.id}
+                                {...customer}
+                                customersPosition={customersPosition}
+                                inner={true}
+                                innerPosition={innerPosition}
+                                setInnerPosition={setInnerPosition}
+                            />
                             : null
                         )}
                         <div className={styles['slider__circles']}>
@@ -188,7 +205,13 @@ const Customers = () => {
                         </div>
                     </div>
                     {customers.map((customer, i) => i !== currentSlide ?
-                        <CustomerAvatar key={customer.id} avatar={customer.avatar}/>
+                        <CustomerAvatar
+                            key={customer.id}
+                            avatar={customer.avatar}
+                            customersPosition={customersPosition}
+                            innerPosition={innerPosition}
+                            setInnerPosition={setInnerPosition}
+                        />
                         : null
                     )}
                 </div>

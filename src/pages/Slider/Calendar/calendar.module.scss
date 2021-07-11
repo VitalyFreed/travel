@@ -32,9 +32,6 @@
   width: 100%;
 
   &-date {
-    //color: #FFFFFF;
-    //padding: 0 30px;
-    //background: rgba(#119480, 0.5);
   }
 }
 
@@ -51,11 +48,6 @@
   th, td {
     width: 12%;
     text-align: center;
-
-    &:hover {
-      border-radius: 2px;
-      background: #fbb450;
-    }
   }
 
   th {
@@ -68,6 +60,11 @@
   td {
     padding: 7px;
     height: 30px;
+
+    &:hover {
+      border-radius: 2px;
+      background: #fbb450;
+    }
   }
 }
 
