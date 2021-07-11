@@ -42,7 +42,7 @@ const Lighthouse = () => {
     ];
 
     return (
-        <div className={styles.lighthouse}>
+        <div className={styles.lighthouse} id='offer'>
             <div className={styles.container}>
                 <div className={styles['lighthouse__img-block']}>
                     <img src={lighthouseImg} alt="lighthouse" className={styles['lighthouse-img']}/>

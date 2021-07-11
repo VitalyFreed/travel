@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 
 import styles from './header.module.scss';
 
@@ -19,10 +20,10 @@ const Header = () => {
                 </a>
                 <nav className={styles.menu}>
                     <ul className={styles['menu__list']}>
-                        <li className={styles['menu__item']}><a href='#'>Destination</a></li>
-                        <li className={styles['menu__item']}><a href='#'>Offer</a></li>
-                        <li className={styles['menu__item']}><a href='#'>Tour</a></li>
-                        <li className={styles['menu__item']}><a href='#'>Blog</a></li>
+                        <li className={styles['menu__item']}><Link to='#destination'>Destination</Link></li>
+                        <li className={styles['menu__item']}><Link to='#offer'>Offer</Link></li>
+                        <li className={styles['menu__item']}><Link to='#tour'>Tour</Link></li>
+                        <li className={styles['menu__item']}><Link to='#blog'>Blog</Link></li>
                     </ul>
                 </nav>
                 <div className={styles.account}>
